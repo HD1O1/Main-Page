@@ -534,10 +534,10 @@ export default function TeamMembers() {
             {advisors.map((advisor, index) => (
               <article
                 key={advisor.name}
-                className="reveal group overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.07] shadow-[0_28px_90px_rgba(0,0,0,0.42)] backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:border-[#F4B400]/70 hover:bg-white/[0.095] hover:shadow-[0_32px_110px_rgba(244,180,0,0.22)]"
+                className="reveal group flex flex-col overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.07] shadow-[0_28px_90px_rgba(0,0,0,0.42)] backdrop-blur-2xl transition duration-500 hover:-translate-y-2 hover:border-[#F4B400]/70 hover:bg-white/[0.095] hover:shadow-[0_32px_110px_rgba(244,180,0,0.22)]"
                 style={{ "--delay": `${index * 110}ms` } as React.CSSProperties}
               >
-                <div className="h-80 overflow-hidden bg-[#111111] sm:h-96">
+                <div className="h-80 shrink-0 overflow-hidden bg-[#111111] sm:h-96">
                   <img
                     src={advisor.image}
                     alt={advisor.name}
@@ -545,15 +545,15 @@ export default function TeamMembers() {
                     loading="lazy"
                   />
                 </div>
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <p className="text-2xl font-extrabold tracking-[-0.04em] text-white">{advisor.name}</p>
                   <p className="mt-2 text-sm font-bold uppercase tracking-[0.16em] text-[#F4B400]">{advisor.focus}</p>
-                  <p className="mt-5 text-[15px] leading-7 text-white/66">{advisor.bio}</p>
+                  <p className="mt-5 flex-1 text-[15px] leading-7 text-white/66">{advisor.bio}</p>
                   <a
                     href={advisor.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#F4B400]/30 bg-[#F4B400]/10 px-4 py-2 text-sm font-bold text-[#fff3c4] transition hover:border-[#F4B400] hover:bg-[#F4B400] hover:text-[#050505] hover:shadow-[0_0_30px_rgba(244,180,0,0.3)]"
+                    className="mt-6 inline-flex self-start items-center gap-2 rounded-full border border-[#F4B400]/30 bg-[#F4B400]/10 px-4 py-2 text-sm font-bold text-[#fff3c4] transition hover:border-[#F4B400] hover:bg-[#F4B400] hover:text-[#050505] hover:shadow-[0_0_30px_rgba(244,180,0,0.3)]"
                     aria-label={`Visit ${advisor.name} on LinkedIn`}
                   >
                     <LinkedInIcon />

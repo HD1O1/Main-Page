@@ -5,14 +5,6 @@ import Footer from '../components/Footer';
 
 const trustedPartners = [
   {
-    name: 'Mprofy DAO',
-    website: 'https://www.mprofy.com/',
-    logoSrc: 'https://www.google.com/s2/favicons?domain=mprofy.com&sz=128',
-  },
-  {
-    name: 'Sound Rig',
-  },
-  {
     name: 'Spent Academy',
     website: 'https://spentacademy.com/',
     logoSrc: 'https://www.google.com/s2/favicons?domain=spentacademy.com&sz=128',
@@ -21,9 +13,6 @@ const trustedPartners = [
     name: 'LingoQL',
     website: 'https://lingoql.com/',
     logoSrc: 'https://www.google.com/s2/favicons?domain=lingoql.com&sz=128',
-  },
-  {
-    name: 'Suilife',
   },
   {
     name: 'Xini8',
@@ -347,7 +336,7 @@ export default function About() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-5">
+          <div className="mx-auto grid max-w-3xl grid-cols-3 items-center gap-6 sm:gap-12">
             {trustedPartners.map((partner, index) => {
               const CardContent = (
                 <motion.div
